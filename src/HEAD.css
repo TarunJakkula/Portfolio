@@ -1,0 +1,46 @@
+.Header {
+  background-color: transparent;
+  padding-top: 20px;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  mix-blend-mode: difference;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.scroll {
+  font-size: 1.3em;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  font-weight: 300;
+  background-color: rgba(255, 255, 255, 0);
+  color: #d6d7d8;
+  transition: border-bottom 0.4s;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.scroll:after {
+  content: " ";
+  background-color: #d6d7d8;
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  transform: scale(0);
+  transition: transform 200ms;
+  transform-origin: left;
+}
+
+.scroll:hover::after {
+  transform: scale(100%);
+}
+
+@media (max-width: 1000px) {
+  .scroll {
+    font-size: 1em;
+  }
+}
