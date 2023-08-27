@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.ea0fb8e8.css",
+    "main.js": "/Portfolio/static/js/main.f9de2323.js",
+    "static/media/img1.png": "/Portfolio/static/media/img1.ce96778f311531f9315c.png",
+    "static/media/Screenshot_20220602-091434.jpg": "/Portfolio/static/media/Screenshot_20220602-091434.fb46188e572430c8a1c5.jpg",
+    "static/media/img2.png": "/Portfolio/static/media/img2.54d09ceb5163008bad6f.png",
+    "static/media/ColoredPatternsCertif_.svg": "/Portfolio/static/media/ColoredPatternsCertif_.676d717374bfe9dd747d.svg",
+    "static/media/ColoredPatternsExp.svg": "/Portfolio/static/media/ColoredPatternsExp.fc3157a8a415862fbd45.svg",
+    "static/media/ColoredPatterns_profile.svg": "/Portfolio/static/media/ColoredPatterns_profile.a160bbcc6720f0bc5c36.svg",
+    "static/media/ColoredPatternsProject.svg": "/Portfolio/static/media/ColoredPatternsProject.b7ec3bafabe4e4283171.svg",
+    "index.html": "/Portfolio/index.html",
+    "static/media/github-mark.svg": "/Portfolio/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
+    "static/media/github-mark-white.svg": "/Portfolio/static/media/github-mark-white.97ed8e7eef60d61ca469881dd6f34511.svg",
+    "static/media/arrow.svg": "/Portfolio/static/media/arrow.fba791fc3a56d3ca94cc12fe4134a749.svg",
+    "static/media/arrow_upward.svg": "/Portfolio/static/media/arrow_upward.9f61e74f03665193dda6b8ef951b0a4a.svg",
+    "main.ea0fb8e8.css.map": "/Portfolio/static/css/main.ea0fb8e8.css.map",
+    "main.f9de2323.js.map": "/Portfolio/static/js/main.f9de2323.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea0fb8e8.css",
+    "static/js/main.f9de2323.js"
+  ]
+}
