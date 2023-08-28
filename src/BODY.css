@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Borel&family=Poppins&display=swap");
-
 :root {
   --_30: 30%;
   --_40: 40%;
@@ -146,10 +144,6 @@
   font-size: 1.5em !important;
 }
 
-.padding-10v {
-  padding-left: 10vw;
-}
-
 .underline {
   text-decoration: underline;
 }
@@ -172,12 +166,9 @@
 .profile {
   display: flex;
   justify-content: space-around;
-  height: 900px;
-  background-image: url("./Body/public/ColoredPatterns_profile.svg");
+  height: 100vh;
+  background-color: #191919;
   padding-bottom: 100px;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .profile-div {
@@ -271,13 +262,10 @@
 /* certif */
 
 .certif {
-  background-image: url("./Body/public/ColoredPatternsCertif_.svg");
   display: flex;
   justify-content: center;
-  background-size: cover;
   padding-bottom: 100px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-color: white;
 }
 
 .certif-heading {
@@ -314,13 +302,10 @@
 /* skills & experience */
 
 .exp {
-  background-image: url("./Body/public/ColoredPatternsExp.svg");
   display: flex;
   justify-content: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   padding-bottom: 120px;
+  background-color: white;
 }
 
 .exp-heading {
@@ -359,13 +344,10 @@
 /* Project */
 
 .project {
-  background-image: url("./Body/public/ColoredPatternsProject.svg");
   display: flex;
   justify-content: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   padding-bottom: 120px;
+  background-color: #191919;
 }
 
 .project-heading {
@@ -523,7 +505,7 @@
 
 @media (max-width: 1000px) {
   .profile {
-    height: 900px;
+    height: 90vh;
   }
   .profile-div {
     display: grid;
