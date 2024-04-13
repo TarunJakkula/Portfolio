@@ -3,8 +3,8 @@ import BODY from "./BODY.jsx";
 import { useCallback, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 function MAIN() {
-  const certif = useRef(null);
-  const exp = useRef(null);
+  const details = useRef(null);
+  const skills = useRef(null);
   const profile = useRef(null);
   const project = useRef(null);
   const [prof, ProfileinView] = useInView({ threshold: 0.5 });
@@ -26,11 +26,11 @@ function MAIN() {
   };
 
   return (
-    <div>
+    <>
       <HEAD
         project={project}
-        exp={exp}
-        certif={certif}
+        skills={skills}
+        details={details}
         HandleClick={HandleClick}
       />
       <BODY
@@ -38,11 +38,11 @@ function MAIN() {
         profile={profile}
         ProfileinView={ProfileinView}
         project={project}
-        certif={certif}
-        exp={exp}
+        details={details}
+        skills={skills}
         HandleClick={HandleClick}
       />
-    </div>
+    </>
   );
 }
 

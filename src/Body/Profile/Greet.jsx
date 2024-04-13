@@ -1,35 +1,27 @@
 import Githublogo from "../public/github-mark-white.svg";
 import Linkedinlogo from "../public/LI-In-Bug.png";
-import randomImg from "../public/Screenshot_20220602-091434.jpg";
+import randomImg from "../public/PXL_20240214_120854672.jpg";
 
-function GreetBody({ detailToggleRef, setDetailToggle, setDetailToggleRef }) {
+function GreetBody() {
   return (
-    <>
-      <div
-        className={
-          detailToggleRef ? "Body-details animate-out-details " : "Body-details"
-        }
-      >
-        <span className="NAME size-large animate-in-NAME">Hello!..</span>
-        <div className="NAME animate-in-NAME size-medium">
-          <span>this is </span>
-          <span className="red">
-            TARUN
-            <div className="know-more">
-              <button
-                onClick={() => {
-                  setDetailToggleRef(true);
-                  setTimeout(() => {
-                    setDetailToggle(true);
-                  }, 800);
-                }}
-              >
-                MORE
-              </button>
-            </div>
-          </span>
-          <span className="load">.</span>
-        </div>
+    <div className="greet">
+      <div className="img-profile">
+        <img src={randomImg} alt="" className="img-profile-slit" />
+      </div>
+      <div className="Body-details ">
+        <span className="NAME size-medium animate-in-NAME">
+          TARUN JAKKULA {"  "}
+          <span className="load"> .</span>
+        </span>
+        <br />
+        <span className="NAME size-medium2 animate-in-NAME cornblue">
+          About Me
+        </span>
+        <span className="NAME size-smol font-400 animate-in-NAME text-wrap line-height-2">
+          <span className="size-medium3 vertical-bottom">👋</span> I'm a
+          Computer Science Engineer, deeply passionate about coding. My main
+          interests lie in Web Development and Machine Learning.
+        </span>
 
         <div className="socials">
           <a
@@ -48,14 +40,7 @@ function GreetBody({ detailToggleRef, setDetailToggle, setDetailToggleRef }) {
           </a>
         </div>
       </div>
-      <div
-        className={
-          detailToggleRef ? "animate-out-img img-profile" : "img-profile"
-        }
-      >
-        <img src={randomImg} alt="" className="img-profile-slit" />
-      </div>
-    </>
+    </div>
   );
 }
 
