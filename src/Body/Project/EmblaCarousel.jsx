@@ -15,13 +15,25 @@ const EmblaCarousel = ({ slides, options }) => {
   const images = [apd, yaarit, ecommerece, tsrtc, conditional];
   const description = [
     [
-      "Autonomous Pesticide Deployement",
+      ["Autonomous Pesticide Deployement", "https://apd-nextjs.vercel.app/"],
       "NextJS, Flask, Reienforcement learning",
     ],
-    ["Yaarit", "MERN Stack"],
-    ["ECommerce Replica", "ReactJS"],
-    ["TSRTC BUS TRACKING", "MERN Stack"],
-    ["Condition Monitoring", "Machine Learning"],
+    [["Yaarit", "https://yaarit-react.vercel.app/"], "MERN Stack"],
+    [
+      [
+        "ECommerce Replica",
+        "https://tarunjakkula.github.io/ECommerceSampleProject/",
+      ],
+      "ReactJS",
+    ],
+    [["TSRTC BUS TRACKING", null], "MERN Stack"],
+    [
+      [
+        "Condition Monitoring",
+        "https://ieeexplore.ieee.org/abstract/document/10112491",
+      ],
+      "Machine Learning",
+    ],
   ];
   const links = [
     "https://github.com/TarunJakkula/APD_Nextjs",
@@ -45,9 +57,26 @@ const EmblaCarousel = ({ slides, options }) => {
                   alt="Your alt text"
                 />
                 <div className="embla__slide__description">
-                  <span className="NAME black size-medium2">
-                    {description[index][0]}
-                  </span>
+                  <a
+                    href={description[index][0][1]}
+                    target="_blank"
+                    className="NAME black size-medium2"
+                    rel="noreferrer"
+                  >
+                    {description[index][0][0]}
+                    {description[index][0][1] && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#000000"
+                      >
+                        <path d="M440-280H280q-83 0-141.5-58.5T80-480q0-83 58.5-141.5T280-680h160v80H280q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h320v80H320Zm200 160v-80h160q50 0 85-35t35-85q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 83-58.5 141.5T680-280H520Z" />
+                      </svg>
+                    )}
+                  </a>
+
                   <br />
                   <span className="NAME black size-smol">
                     {"("}

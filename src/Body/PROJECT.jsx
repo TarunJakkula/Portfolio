@@ -10,14 +10,12 @@ function PROJECT({ project }) {
   const [Bref] = useInView({ threshold: 0.1 });
 
   return (
-    <div ref={project} className="project">
-      <div>
-        <div className={`project-heading `} ref={Href}>
-          <span className="NAME size-medium">My Projects</span>
-        </div>
-        <div className={`project-carousel `} ref={Bref}>
-          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-        </div>
+    <div ref={project} className="project flex flex-col">
+      <div className={`project-heading `} ref={Href}>
+        <span className="NAME size-medium">My Projects</span>
+      </div>
+      <div className={`project-carousel `} ref={Bref}>
+        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
       </div>
     </div>
   );

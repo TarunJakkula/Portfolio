@@ -1,9 +1,16 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Details(props) {
   const [selected, setSelected] = useState(0);
 
   const experince = [
+    {
+      1: "Wielabs",
+      2: "Junior Software Developer Intern",
+      3: "Working on realtime projects in MERN stack as a junior frontend developer intern.",
+      4: "April 2024 - present",
+    },
     {
       1: "Google DSC",
       2: "Web-Dev Lead",
@@ -67,18 +74,28 @@ function Details(props) {
           );
         })}
       </div>
-      <div className="details-selected">
-        {details[selected].data.map((obj, index) => {
-          return (
-            <div key={index} className="NAME white details-card">
-              <span className="size-medium3">{obj[1]}</span>
-              <span className="size-medium1 cornblue">{obj[2]}</span>
-              <span className="size-medium3">{obj[4]}</span>
-              <span className="size-smol font-400 line-height-2">{obj[3]}</span>
-            </div>
-          );
-        })}
-      </div>
+      <AnimatePresence initial={true} mode="popLayout">
+        <motion.div
+          key={selected + "div"}
+          initial={{ opacity: 0, translateX: "-10%" }}
+          animate={{ opacity: 1, translateX: "0" }}
+          exit={{ opacity: 0, translateX: "-10%" }}
+          className="details-selected"
+        >
+          {details[selected].data.map((obj, index) => {
+            return (
+              <div key={obj + index} className="NAME white details-card">
+                <span className="size-medium3">{obj[1]}</span>
+                <span className="size-medium1 cornblue">{obj[2]}</span>
+                <span className="size-medium3">{obj[4]}</span>
+                <span className="size-smol font-400 line-height-2">
+                  {obj[3]}
+                </span>
+              </div>
+            );
+          })}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
