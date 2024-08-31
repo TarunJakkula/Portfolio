@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+.baskervville-sc {
+  font-family: "Baskervville SC", serif;
+}
+
+.underlined {
+  position: relative;
+}
+
+.underlined:after {
+  content: " ";
+  background-color: #eb5e28;
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  transform: scale(0);
+  transition: transform 400ms;
+  transform-origin: left;
+}
+
+.underlined:hover::after {
+  transform: scale(100%);
+}
+
+.strokeIt-white {
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+}
