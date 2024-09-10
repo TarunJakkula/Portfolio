@@ -11,7 +11,7 @@ export default function Project() {
   return (
     <div
       id="projects"
-      className="w-full h-auto md:py-10 py-5 md:gap-10 gap-3 md:pt-32 flex justify-center items-center"
+      className="w-full h-auto md:py-10 py-5 md:gap-10 gap-3 md:pt-32 pt-20 flex justify-center items-center"
     >
       <span className="text-vertical font-bold strokeIt-white poppins lg:text-6xl md:text-4xl text-2xl tracking-widest uppercase">
         Projects
