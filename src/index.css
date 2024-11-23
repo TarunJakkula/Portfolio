@@ -5,8 +5,9 @@
 .poppins {
   font-family: "Poppins", sans-serif;
 }
-.baskervville-sc {
-  font-family: "Baskervville SC", serif;
+
+.silkscreen {
+  font-family: "Silkscreen", sans-serif;
 }
 
 .underlined {
@@ -15,7 +16,7 @@
 
 .underlined:after {
   content: " ";
-  background-color: #eb5e28;
+  background-color: #c7342a;
   position: absolute;
   top: 100%;
   left: 10%;
@@ -33,4 +34,10 @@
 .strokeIt-white {
   color: transparent;
   -webkit-text-stroke: 1px #ffffff;
+}
+
+.noise {
+  background-image: url("../src/assets/noise-light.png");
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
 }

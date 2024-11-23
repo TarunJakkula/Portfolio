@@ -27,20 +27,20 @@ export default function RootLayout() {
     [0, isXL ? 300 : 200],
     [isXL ? 50 : 30, 0]
   );
-  const opacity = useTransform(scrollY, [0, isXL ? 300 : 200], [0.5, 0]);
+  const opacity = useTransform(scrollY, [0, isXL ? 300 : 200], [0.7, 0]);
 
   return (
     <>
       <motion.span
         style={{ opacity }}
-        className="fixed top-0 left-0 xl:text-8xl text-6xl poppins font-semibold -z-[1] flex justify-center items-center w-full p-24 xl:px-36 lg:px-20 md:px-16 px-12 "
+        className="fixed top-0 left-0 xl:text-8xl text-black text-6xl poppins font-semibold -z-[1] flex justify-center items-center w-full p-24 xl:px-36 lg:px-20 md:px-16 px-12 "
       >
         Portfolio
       </motion.span>
       <motion.div
         style={{ width, borderRadius }}
         id="main"
-        className="min-h-screen h-auto xl:mt-[300px] mt-[200px] flex flex-col items-center lg:p-10 md:p-7 p-5 bg-[#252422] relative"
+        className="min-h-screen h-auto xl:mt-[300px] mt-[200px] flex flex-col items-center lg:py-10 md:py-7 py-5 bg-[#c7342a] noise relative"
       >
         <App />
       </motion.div>

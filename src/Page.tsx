@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <>
       <Header />
-      <div className="text-white flex flex-col md:w-[80%] w-full justify-center items-center">
+      <div className="text-white flex flex-col w-full justify-center items-center">
         <Intro />
         <Technologies />
         <Experience />

@@ -14,15 +14,15 @@ export default function Experience() {
     <div
       ref={lineContainer}
       id="experience"
-      className="w-full h-auto py-12 md:gap-10 gap-5 md:pt-32 pt-20 relative flex"
+      className=" w-[80%] h-auto py-12 md:gap-10 gap-5 md:pt-32 pt-20 relative flex"
     >
-      <span className="text-vertical poppins lg:text-6xl md:text-4xl text-2xl h-fit font-bold strokeIt-white tracking-widest uppercase sticky  top-32">
+      <span className="text-vertical silkscreen lg:text-6xl md:text-4xl text-2xl h-fit font-bold strokeIt-white tracking-widest uppercase sticky  top-32">
         Experience
       </span>
       <div className="w-[6px]  bg-[#eb5f282a] relative ">
         <motion.div
           style={{ height }}
-          className="absolute top-0 left-0 w-full bg-[#eb5e28]"
+          className="absolute top-0 left-0 w-full bg-white"
         />
       </div>
       <div className="flex flex-col items-start md:py-10 py-5 md:gap-16 gap-5">
@@ -32,21 +32,23 @@ export default function Experience() {
               key={index}
               className="flex md:flex-row flex-col xl:gap-20 lg:gap-16 md:gap-12 gap-3"
             >
-              <span className="baskervville-sc lg:text-9xl md:text-7xl text-5xl h-full leading-[0.5]  tracking-[-0.1em]">
+              <span className="silkscreen lg:text-9xl md:text-7xl text-5xl h-full leading-[0.5]  tracking-[-0.1em]">
                 {index < 10 && "0"}
-                <span className="drop-shadow-2xl text-[#eb5e28]">
-                  {index + 1}
+                <span className="drop-shadow-2xl text-white">
+                  {experience.length - index}
                 </span>
               </span>
               <div key={index} className="flex flex-col ">
-                <code className="md:text-2xl text-lg">{obj.Company}</code>
-                <code className="md:text-4xl text-xl text-[#eb5e28] ">
+                <span className="md:text-2xl text-lg poppins">
+                  {obj.Company}
+                </span>
+                <span className="md:text-4xl text-xl text-white silkscreen ">
                   {obj.Role}
-                </code>
-                <code className="md:text-2xl text-lg">{obj.Date}</code>
-                <code className="md:text-md text-sm md:mt-3 mt-1">
+                </span>
+                <span className="md:text-2xl text-lg poppins">{obj.Date}</span>
+                <span className="md:text-md text-sm md:mt-3 mt-1 poppins">
                   {obj.Description}
-                </code>
+                </span>
               </div>
             </div>
           );

@@ -1,9 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCreative, Pagination } from "swiper/modules";
+import { Mousewheel, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-creative";
 
 import { projects } from "../util/staticData";
 
@@ -11,9 +10,9 @@ export default function Project() {
   return (
     <div
       id="projects"
-      className="w-full h-auto md:py-10 py-5 md:gap-10 gap-3 md:pt-32 pt-20 flex justify-center items-center"
+      className="w-[80%] md:h-screen h-[700px] md:gap-10 sm:gap-5 gap-1 flex justify-center items-center"
     >
-      <span className="text-vertical font-bold strokeIt-white poppins lg:text-6xl md:text-4xl text-2xl tracking-widest uppercase">
+      <span className="text-vertical font-bold strokeIt-white silkscreen lg:text-6xl md:text-4xl text-2xl tracking-widest uppercase">
         Projects
       </span>
       <Swiper
@@ -21,41 +20,33 @@ export default function Project() {
           dynamicBullets: true,
         }}
         grabCursor={true}
-        effect={"creative"}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ["100%", 0, 0],
-          },
-        }}
-        modules={[Pagination, EffectCreative]}
-        className=" md:w-full w-[70%]"
+        mousewheel={true}
+        direction="vertical"
+        modules={[Mousewheel, Pagination]}
+        className=" lg:w-full w-auto h-4/5"
       >
         {projects.map((obj, index) => {
           return (
-            <SwiperSlide key={index} className=" mb-10">
+            <SwiperSlide key={index} className="h-full flex items-center">
               <div
                 className={`${
                   obj.Name === "Yaarit" || obj.Name === "Tsrtc Bus Tracking"
                     ? "text-black font-medium"
                     : "text-white"
-                } w-full flex justify-center h-auto relative rounded-xl overflow-hidden group`}
+                } w-full flex justify-center h-auto relative rounded-xl shadow-xl overflow-hidden group`}
               >
-                <div className="absolute top-2 left-2 bg-[#eb5e28] text-black poppins text-xl font-bold w-10 h-10 rounded-full flex justify-center items-center">
+                <div className="absolute top-2 left-2 bg-[#c7342a] text-black poppins text-xl font-bold w-10 h-10 rounded-full flex justify-center items-center">
                   {index + 1}
                 </div>
                 <img
                   src={obj.ImageSmall}
                   alt={obj.Name}
-                  className="w-full h-auto object-cover sm:hidden"
+                  className="w-auto md:h-[700px] h-[500px] object-cover lg:hidden"
                 />
                 <img
                   src={obj.Image}
                   alt={obj.Name}
-                  className="w-full h-auto object-cover hidden sm:block"
+                  className="w-full h-auto object-cover hidden lg:block"
                 />
                 <div
                   className={`${
