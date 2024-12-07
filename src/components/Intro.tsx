@@ -31,7 +31,7 @@ export default function Intro() {
             download={true}
             onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
             onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
-            className="bg-white rounded-full text-black poppins shadow-2xl w-fit py-3 px-5 sm:text-sm text-xs cursor-none"
+            className="bg-white rounded-full text-black poppins shadow-2xl w-fit py-3 px-5 sm:text-sm text-xs md:cursor-none"
           >
             Download Resume
           </a>
@@ -39,7 +39,7 @@ export default function Intro() {
             href="#footer"
             onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
             onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
-            className="bg-transparent rounded-full text-white drop-shadow-2xl poppins w-fit p-3 sm:text-sm text-xs cursor-none"
+            className="bg-transparent rounded-full text-white drop-shadow-2xl poppins w-fit p-3 sm:text-sm text-xs md:cursor-none"
           >
             Contact Me
           </a>

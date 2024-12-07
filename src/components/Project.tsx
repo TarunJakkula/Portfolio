@@ -100,7 +100,7 @@ export default function Project() {
                               obj.Name === "Tsrtc Bus Tracking"
                                 ? "text-blue-900 font-medium underlined-dark-blue"
                                 : "text-blue-400 underlined-light-blue"
-                            } md:text-lg text-sm cursor-none`}
+                            } md:text-lg text-sm md:cursor-none`}
                             onMouseEnter={() =>
                               setCursorVariant && setCursorVariant("default")
                             }

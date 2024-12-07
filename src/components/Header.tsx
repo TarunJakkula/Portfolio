@@ -35,7 +35,7 @@ export default function Header() {
           href="#main"
           onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
           onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
-          className="poppins md:text-base text-sm uppercase tracking-wide font-medium text-black cursor-none"
+          className="poppins md:text-base text-sm uppercase tracking-wide font-medium text-black md:cursor-none"
         >
           tarun jakkula
         </a>
@@ -43,7 +43,7 @@ export default function Header() {
           href="#experience"
           onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
           onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
-          className="text-[#c7342a] underlined md:text-base sm:text-sm text-xs md:block hidden cursor-none"
+          className="text-[#c7342a] underlined md:text-base sm:text-sm text-xs md:block hidden md:cursor-none"
         >
           experience
         </a>
@@ -51,7 +51,7 @@ export default function Header() {
           href="#projects"
           onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
           onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
-          className="text-[#c7342a] underlined md:text-base sm:text-sm text-xs md:block hidden cursor-none"
+          className="text-[#c7342a] underlined md:text-base sm:text-sm text-xs md:block hidden md:cursor-none"
         >
           projects
         </a>
@@ -61,7 +61,7 @@ export default function Header() {
           rel="noreferrer"
           onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
           onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
-          className="md:block hidden cursor-none"
+          className="md:block hidden md:cursor-none"
         >
           <img src={Github} alt="GitHub" width={"20px"} height={"25px"} />
         </a>
@@ -71,12 +71,12 @@ export default function Header() {
           rel="noreferrer"
           onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
           onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
-          className="md:block hidden cursor-none"
+          className="md:block hidden md:cursor-none"
         >
           <img src={Linkedin} alt="LinkedIn" width={"25px"} height={"25px"} />
         </a>
         <button
-          className="p-1 rounded-full flex justify-center items-center md:hidden cursor-none"
+          className="p-1 rounded-full flex justify-center items-center md:hidden md:cursor-none"
           onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
           onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
           onClick={toggleMenu}
