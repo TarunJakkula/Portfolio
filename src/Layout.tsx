@@ -83,7 +83,7 @@ export default function RootLayout() {
     <CursorContext.Provider value={{ setCursorVariant }}>
       <motion.div
         variants={variants}
-        className="z-[100] fixed top-0 left-0 h-3 w-3 bg-white mix-blend-exclusion border rounded-full pointer-events-none "
+        className="z-[100] fixed top-0 left-0 h-3 w-3 bg-white mix-blend-exclusion border rounded-full pointer-events-none md:block hidden"
         animate={cursorVariant}
         transition={{
           type: "tween",
