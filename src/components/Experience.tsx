@@ -1,8 +1,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import { experience } from "../util/staticData";
+import { CursorContext } from "../Layout";
 
 export default function Experience() {
+  const { setCursorVariant } = useContext(CursorContext);
   const lineContainer = useRef(null);
   const { scrollYProgress } = useScroll({
     target: lineContainer,
@@ -16,7 +18,11 @@ export default function Experience() {
       id="experience"
       className=" w-[80%] h-auto py-12 md:gap-10 gap-5 md:pt-32 pt-20 relative flex"
     >
-      <span className="text-vertical silkscreen lg:text-6xl md:text-4xl text-2xl h-fit font-bold strokeIt-white tracking-widest uppercase sticky  top-32">
+      <span
+        className="text-vertical silkscreen lg:text-6xl md:text-4xl text-2xl h-fit font-bold strokeIt-white tracking-widest uppercase sticky top-32"
+        onMouseEnter={() => setCursorVariant && setCursorVariant("text")}
+        onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
+      >
         Experience
       </span>
       <div className="w-[6px]  bg-[#eb5f282a] relative ">
@@ -38,7 +44,16 @@ export default function Experience() {
                   {experience.length - index}
                 </span>
               </span>
-              <div key={index} className="flex flex-col ">
+              <div
+                key={index}
+                className="flex flex-col "
+                onMouseEnter={() =>
+                  setCursorVariant && setCursorVariant("text")
+                }
+                onMouseLeave={() =>
+                  setCursorVariant && setCursorVariant("click")
+                }
+              >
                 <span className="md:text-2xl text-lg poppins">
                   {obj.Company}
                 </span>

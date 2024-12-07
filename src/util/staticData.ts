@@ -10,6 +10,7 @@ import {
   mongodb,
   mysql,
   nextjs,
+  nextjsWhite,
   nodejs,
   opencv,
   python,
@@ -185,7 +186,7 @@ const projects = [
       { Name: "Github", Link: "https://github.com/TarunJakkula/APD_Nextjs" },
     ],
     Tech: [
-      { Image: nextjs, Alt: "nextjs" },
+      { Image: nextjsWhite, Alt: "nextjs" },
       { Image: tailwindcss, Alt: "tailwindcss" },
     ],
   },

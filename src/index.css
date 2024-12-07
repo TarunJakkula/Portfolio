@@ -31,6 +31,48 @@
   transform: scale(100%);
 }
 
+.underlined-light-blue {
+  position: relative;
+}
+
+.underlined-light-blue:after {
+  content: " ";
+  background-color: #60a5fa;
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  transform: scale(0);
+  transition: transform 400ms;
+  transform-origin: left;
+}
+
+.underlined-light-blue:hover::after {
+  transform: scale(100%);
+}
+
+.underlined-dark-blue {
+  position: relative;
+}
+
+.underlined-dark-blue:after {
+  content: " ";
+  background-color: #1e3a8a;
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  transform: scale(0);
+  transition: transform 400ms;
+  transform-origin: left;
+}
+
+.underlined-dark-blue:hover::after {
+  transform: scale(100%);
+}
+
 .strokeIt-white {
   color: transparent;
   -webkit-text-stroke: 1px #ffffff;

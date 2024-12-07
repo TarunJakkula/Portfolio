@@ -1,5 +1,6 @@
 import reactjs from "../assets/icons/reactjs.svg";
 import nextjs from "../assets/icons/nextjs.svg";
+import nextjsWhite from "../assets/icons/nextjs-white.svg";
 import tailwindcss from "../assets/icons/tailwindcss.svg";
 import reduxjs from "../assets/icons/reduxjs.svg";
 import reactnative from "../assets/icons/reactnative.svg";
@@ -24,6 +25,7 @@ import opencv from "../assets/icons/opencv.svg";
 export {
   reactjs,
   nextjs,
+  nextjsWhite,
   tailwindcss,
   reduxjs,
   reactnative,

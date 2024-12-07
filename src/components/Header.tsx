@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Github from "../assets/icons/githubLogo.svg";
 import Linkedin from "../assets/icons/LI-In-Bug.png";
+import { CursorContext } from "../Layout";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { setCursorVariant } = useContext(CursorContext);
 
   useEffect(() => {
     if (isOpen) {
@@ -27,23 +29,29 @@ export default function Header() {
   };
 
   return (
-    <div className="w-[80%] sticky md:mt-16 mt-8 md:top-16 top-8 flex justify-center items-center z-[2] ">
+    <div className="sticky md:mt-16 mt-8 md:top-16 top-8 flex justify-center items-center z-[2]">
       <header className=" md:w-fit w-full flex md:justify-center justify-between items-center shadow-2xl md:gap-10 gap-5 text-base md:py-5 py-3 md:px-10 sm:px-7 px-5 bg-neutral-50 rounded-full poppins">
         <a
           href="#main"
-          className="poppins md:text-base text-sm uppercase tracking-wide font-medium text-black"
+          onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
+          onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
+          className="poppins md:text-base text-sm uppercase tracking-wide font-medium text-black cursor-none"
         >
           tarun jakkula
         </a>
         <a
           href="#experience"
-          className="text-[#c7342a] underlined md:text-base sm:text-sm text-xs md:block hidden"
+          onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
+          onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
+          className="text-[#c7342a] underlined md:text-base sm:text-sm text-xs md:block hidden cursor-none"
         >
           experience
         </a>
         <a
           href="#projects"
-          className="text-[#c7342a] underlined md:text-base sm:text-sm text-xs md:block hidden"
+          onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
+          onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
+          className="text-[#c7342a] underlined md:text-base sm:text-sm text-xs md:block hidden cursor-none"
         >
           projects
         </a>
@@ -51,7 +59,9 @@ export default function Header() {
           href="https://github.com/TarunJakkula"
           target="_blank"
           rel="noreferrer"
-          className="md:block hidden"
+          onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
+          onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
+          className="md:block hidden cursor-none"
         >
           <img src={Github} alt="GitHub" width={"20px"} height={"25px"} />
         </a>
@@ -59,12 +69,16 @@ export default function Header() {
           href="https://www.linkedin.com/in/tarun-jakkula"
           target="_blank"
           rel="noreferrer"
-          className="md:block hidden"
+          onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
+          onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
+          className="md:block hidden cursor-none"
         >
           <img src={Linkedin} alt="LinkedIn" width={"25px"} height={"25px"} />
         </a>
         <button
-          className="p-1 rounded-full flex justify-center items-center md:hidden"
+          className="p-1 rounded-full flex justify-center items-center md:hidden cursor-none"
+          onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
+          onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
           onClick={toggleMenu}
         >
           <svg
