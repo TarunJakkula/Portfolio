@@ -27,7 +27,7 @@ export default function Intro() {
         </span>
         <div className="flex items-center flex-wrap md:gap-5 gap-1">
           <a
-            href="https://drive.google.com/uc?export=download&id=1-gVPerdDVDPED4DHD--tegDGPS60gMX1"
+            href="https://drive.google.com/uc?export=download&id=1Ko2Qw8pfUuKQPQBxjQrkm0PXozskILJO"
             download={true}
             onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
             onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
