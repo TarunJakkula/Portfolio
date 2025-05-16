@@ -40,6 +40,14 @@ export default function Header() {
           tarun jakkula
         </a>
         <a
+          href="#skills"
+          onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
+          onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
+          className="text-[#c7342a] underlined md:text-base sm:text-sm text-xs md:block hidden md:cursor-none"
+        >
+          skills
+        </a>
+        <a
           href="#experience"
           onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
           onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
@@ -121,6 +129,13 @@ export default function Header() {
           onClick={toggleMenu}
         >
           tarun jakkula
+        </a>
+        <a
+          href="#skills"
+          className="text-[#c7342a] underlined text-center text-2xl mb-6"
+          onClick={toggleMenu}
+        >
+          skills
         </a>
         <a
           href="#experience"

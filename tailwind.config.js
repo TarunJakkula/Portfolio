@@ -11,6 +11,10 @@ export default {
           "writing-mode": "vertical-rl",
           "text-orientation": "mixed",
         },
+        ".text-vertical-reverse": {
+          "writing-mode": "sideways-lr",
+          "text-orientation": "mixed",
+        },
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
     },

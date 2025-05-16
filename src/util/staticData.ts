@@ -1,26 +1,33 @@
 import {
+  aws,
   c,
   cpp,
+  docker,
   expressjs,
+  fastapi,
+  firebase,
   git,
   github,
+  graphql,
   java,
   javascript,
-  keras,
+  // keras,
   mongodb,
   mysql,
   nextjs,
-  nextjsWhite,
+  // nextjsWhite,
   nodejs,
-  opencv,
+  // opencv,
+  postgres,
   python,
   reactjs,
   reactnative,
   reduxjs,
+  rust,
   socketio,
   tailwindcss,
-  tensorflow,
-  threejs,
+  // tensorflow,
+  // threejs,
   typescript,
 } from "./icons";
 
@@ -28,12 +35,41 @@ import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
 import img4 from "../assets/img4.png";
-import img1small from "../assets/img1small.png";
-import img2small from "../assets/img2small.png";
-import img3small from "../assets/img3small.png";
-import img4small from "../assets/img4small.png";
 
 const list = [
+  {
+    title: "Languages",
+    data: [
+      {
+        icon: typescript,
+        techName: "Typescript",
+      },
+      {
+        icon: javascript,
+        techName: "Javascript",
+      },
+      {
+        icon: python,
+        techName: "Python",
+      },
+      {
+        icon: cpp,
+        techName: "C++",
+      },
+      {
+        icon: java,
+        techName: "Java",
+      },
+      {
+        icon: c,
+        techName: "C",
+      },
+      {
+        icon: rust,
+        techName: "Rust",
+      },
+    ],
+  },
   {
     title: "Front-end",
     data: [
@@ -53,10 +89,10 @@ const list = [
         icon: reduxjs,
         techName: "Redux JS",
       },
-      {
-        icon: threejs,
-        techName: "Three JS",
-      },
+      // {
+      //   icon: threejs,
+      //   techName: "Three JS",
+      // },
       {
         icon: reactnative,
         techName: "React Native",
@@ -64,7 +100,7 @@ const list = [
     ],
   },
   {
-    title: "Back-end & Databases",
+    title: "Back-end",
     data: [
       {
         icon: nodejs,
@@ -75,9 +111,22 @@ const list = [
         techName: "Express JS",
       },
       {
-        icon: socketio,
-        techName: "Socket.io",
+        icon: fastapi,
+        techName: "FastAPI",
       },
+      {
+        icon: socketio,
+        techName: "Websockets",
+      },
+      {
+        icon: graphql,
+        techName: "GraphQL",
+      },
+    ],
+  },
+  {
+    title: "Databases",
+    data: [
       {
         icon: mongodb,
         techName: "MongoDB",
@@ -86,40 +135,14 @@ const list = [
         icon: mysql,
         techName: "MySQL",
       },
-    ],
-  },
-
-  {
-    title: "Languages",
-    data: [
       {
-        icon: javascript,
-        techName: "Javascript",
-      },
-      {
-        icon: typescript,
-        techName: "Typescript",
-      },
-      {
-        icon: python,
-        techName: "Python",
-      },
-      {
-        icon: cpp,
-        techName: "C++",
-      },
-      {
-        icon: c,
-        techName: "C",
-      },
-      {
-        icon: java,
-        techName: "Java",
+        icon: postgres,
+        techName: "PostgreSQL",
       },
     ],
   },
   {
-    title: "Misc",
+    title: "Tools",
     data: [
       {
         icon: git,
@@ -130,17 +153,29 @@ const list = [
         techName: "GitHub",
       },
       {
-        icon: tensorflow,
-        techName: "TensorFlow",
+        icon: docker,
+        techName: "Docker",
       },
       {
-        icon: keras,
-        techName: "Keras",
+        icon: aws,
+        techName: "AWS",
       },
       {
-        icon: opencv,
-        techName: "OpenCV",
+        icon: firebase,
+        techName: "Firebase",
       },
+      // {
+      //   icon: tensorflow,
+      //   techName: "TensorFlow",
+      // },
+      // {
+      //   icon: keras,
+      //   techName: "Keras",
+      // },
+      // {
+      //   icon: opencv,
+      //   techName: "OpenCV",
+      // },
     ],
   },
 ];
@@ -149,88 +184,97 @@ const experience = [
   {
     Company: "Wielabs",
     Role: "Junior Software Developer",
-    Description:
-      "Working on realtime projects in MERN stack and NextJS as a junior software developer.",
+    Description: [
+      "Ensured high performance and scalability across 6+ websites and 4+ web apps by implementing scalable TypeScript architectures and development best practices.",
+      "Optimized website performance and SEO, achieving 50% faster load times by leveraging Next.js and React Server Components.",
+      "Built cross-platform mobile apps using React Native, integrating native features like step tracking, in-app purchases, and camera access for seamless user experiences.",
+      "Designed and maintained resilient database solutions, implementing uptime strategies that ensured 99.9% service availability.",
+    ],
     Date: "July 2024 - present",
   },
   {
     Company: "Wielabs",
     Role: "Junior Software Developer Intern",
-    Description:
-      "Working on realtime projects in MERN stack as a junior software developer intern.",
+    Description: [
+      "Contributed to on-time project delivery within 17 member team during 2-month on-site internship.",
+      "Applied skills in Next.js and TypeScript, acquired through 50+ hours of dedicated learning, to build working web applications.",
+    ],
     Date: "April 2024 - June 2024",
   },
   {
     Company: "Google DSC",
     Role: "Web-Dev Lead",
-    Description:
+    Description: [
       "Managed GDSC MVSREC's web development duo for effective project execution. Utilized chances to make impact through contribution.",
+    ],
     Date: "August 2023 - February 2024",
   },
   {
     Company: "DRDO",
     Role: "Summer Intern",
-    Description:
+    Description: [
       "Built A cross-platform aerospace navigation app using QT. Learnt QT C++ and QML by developing a basic calculator app. Used OpenStreetsMap for offline map usage.",
+    ],
     Date: "May 2023 - June 2023",
   },
 ];
 
 const projects = [
   {
+    Image: img3,
+    Name: "Commit",
+    Links: [
+      {
+        Name: "Github",
+        Link: "https://github.com/TarunJakkula/commit_backend",
+      },
+    ],
+    Tech: [
+      { Image: nextjs, Alt: "nextjs" },
+      { Image: tailwindcss, Alt: "tailwindcss" },
+      { Image: nodejs, Alt: "nodejs" },
+      { Image: expressjs, Alt: "expressjs" },
+      { Image: postgres, Alt: "potgres" },
+      { Image: docker, Alt: "docker" },
+    ],
+  },
+  {
+    Image: img1,
+    Name: "Fixity edx",
+    Links: [{ Name: "Work Project", Link: "" }],
+    Tech: [
+      { Image: nextjs, Alt: "nextjs" },
+      { Image: graphql, Alt: "graphql" },
+    ],
+  },
+  {
+    Image: img2,
+    Name: "ClipForge",
+    Links: [
+      {
+        Name: "Github",
+        Link: "https://github.com/TarunJakkula/clipforge_frontend",
+      },
+    ],
+    Tech: [
+      { Image: reactjs, Alt: "reactjs" },
+      { Image: nodejs, Alt: "nodejs" },
+      { Image: fastapi, Alt: "fastapi" },
+      { Image: mongodb, Alt: "mongodb" },
+    ],
+  },
+
+  {
     Image: img4,
-    ImageSmall: img4small,
     Name: "Autonomous Pesticide Deployment",
     Links: [
       { Name: "Website", Link: "https://apd-nextjs.vercel.app/" },
       { Name: "Github", Link: "https://github.com/TarunJakkula/APD_Nextjs" },
     ],
     Tech: [
-      { Image: nextjsWhite, Alt: "nextjs" },
+      { Image: nextjs, Alt: "nextjs" },
       { Image: tailwindcss, Alt: "tailwindcss" },
-    ],
-  },
-  {
-    Image: img3,
-    ImageSmall: img3small,
-    Name: "Yaarit",
-    Links: [
-      { Name: "Website", Link: "https://yaarit-react.vercel.app/" },
-      { Name: "Github", Link: "https://github.com/TarunJakkula/yaarit_react" },
-    ],
-    Tech: [
-      { Image: reactjs, Alt: "reactjs" },
-      { Image: tailwindcss, Alt: "tailwindcss" },
-      { Image: nodejs, Alt: "nodejs" },
-      { Image: expressjs, Alt: "expressjs" },
-      { Image: mongodb, Alt: "mongodb" },
-    ],
-  },
-  {
-    Image: img2,
-    ImageSmall: img2small,
-    Name: "Tsrtc Bus Tracking",
-    Links: [
-      { Name: "Github", Link: "https://github.com/TarunJakkula/Projects" },
-    ],
-    Tech: [
-      { Image: reactjs, Alt: "reactjs" },
-      { Image: nodejs, Alt: "nodejs" },
-      { Image: expressjs, Alt: "expressjs" },
-      { Image: mongodb, Alt: "mongodb" },
-    ],
-  },
-  {
-    Image: img1,
-    ImageSmall: img1small,
-    Name: "Condition Monitoring",
-    Links: [
-      { Name: "Github", Link: "https://github.com/TarunJakkula/Projects" },
-    ],
-    Tech: [
-      { Image: tensorflow, Alt: "tensorflow" },
-      { Image: opencv, Alt: "opencv" },
-      { Image: keras, Alt: "keras" },
+      { Image: python, Alt: "python" },
     ],
   },
 ];

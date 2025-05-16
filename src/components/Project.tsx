@@ -1,125 +1,110 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Pagination } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/pagination";
-
 import { projects } from "../util/staticData";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CursorContext } from "../Layout";
 
 export default function Project() {
   const { setCursorVariant } = useContext(CursorContext);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleLeft = () => setActiveIndex((state) => Math.max(0, state - 1));
+  const handleRight = () =>
+    setActiveIndex((state) => Math.min(projects.length - 1, state + 1));
+
   return (
     <div
       id="projects"
-      className="w-[80%] md:h-screen h-[700px] md:gap-10 sm:gap-5 gap-1 flex justify-center items-center"
+      className="md:w-[80%] w-full h-auto md:gap-10 sm:gap-5 gap-1 flex flex-row-reverse justify-center py-20 relative"
     >
       <span
-        className="text-vertical font-bold strokeIt-white silkscreen lg:text-6xl md:text-4xl text-2xl tracking-widest uppercase"
+        className="md:block hidden text-vertical silkscreen lg:text-6xl md:text-4xl text-2xl h-fit font-bold strokeIt-black tracking-widest uppercase sticky top-32"
         onMouseEnter={() => setCursorVariant && setCursorVariant("text")}
         onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
       >
         Projects
       </span>
-      <Swiper
-        pagination={{
-          dynamicBullets: true,
-        }}
-        mousewheel={true}
-        direction="vertical"
-        modules={[Mousewheel, Pagination]}
-        className=" lg:w-full w-auto h-4/5"
+
+      <div
+        className={` flex-1 flex lg:flex-row-reverse md:gap-10 gap-5 flex-col justify-center h-auto relative overflow-hidden px-10`}
       >
-        {projects.map((obj, index) => {
-          return (
-            <SwiperSlide key={index} className="h-full flex items-center">
-              <div
-                className={`${
-                  obj.Name === "Yaarit" || obj.Name === "Tsrtc Bus Tracking"
-                    ? "text-black font-medium"
-                    : "text-white"
-                } w-full flex justify-center h-auto relative rounded-xl shadow-xl overflow-hidden group`}
-              >
-                <div className="absolute top-2 left-2 bg-[#c7342a] text-black poppins text-xl font-bold w-10 h-10 rounded-full flex justify-center items-center">
-                  {index + 1}
-                </div>
+        <div className="relative w-full max-w-[1000px] flex items-center">
+          <div className="absolute top-0 left-0 h-full w-full hover:opacity-100 opacity-0 transition-opacity flex justify-between items-center">
+            <button
+              onClick={handleLeft}
+              className="bg-white rounded-full shadow-xl text-black silkscreen text-2xl h-10 w-10 pr-1 -translate-x-5"
+            >
+              {"<"}
+            </button>
+            <button
+              onClick={handleRight}
+              className="bg-white rounded-full shadow-xl text-black silkscreen text-2xl h-10 w-10 pl-1 translate-x-5"
+            >
+              {">"}
+            </button>
+          </div>
+          <img
+            src={projects[activeIndex].Image}
+            alt={projects[activeIndex].Name}
+            className="w-full h-auto object-cover flex rounded-xl shadow-xl"
+          />
+        </div>
+        <div
+          className={` poppins p-2 lg:w-[600px] w-[400px] flex flex-col justify-center md:gap-5 gap-2`}
+          onMouseEnter={() => setCursorVariant && setCursorVariant("text")}
+          onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
+        >
+          <p
+            className={` gap-2 silkscreen w-[calc(100%-30px)] lg:text-3xl md:text-2xl sm:text-xl text-lg tracking-tighter`}
+          >
+            {projects[activeIndex].Name}
+          </p>
+          <div className="p-2 rounded-full bg-white w-fit flex gap-2 shadow-xl  ">
+            {projects[activeIndex].Tech.map((innerObj, innerIndex) => {
+              return (
                 <img
-                  src={obj.ImageSmall}
-                  alt={obj.Name}
-                  className="w-auto md:h-[700px] h-[500px] object-cover lg:hidden"
+                  key={innerIndex}
+                  src={innerObj.Image}
+                  alt={innerObj.Alt}
+                  className="lg:h-6 h-5 lg:w-6 w-5 object-fill"
                 />
-                <img
-                  src={obj.Image}
-                  alt={obj.Name}
-                  className="w-full h-auto object-cover hidden lg:block"
-                />
-                <div
-                  className={`${
-                    obj.Name === "Yaarit" || obj.Name === "Tsrtc Bus Tracking"
-                      ? "bg-white"
-                      : "bg-black"
-                  } shadow-2xl  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 absolute poppins top-0 left-0 p-2 h-full w-full hover:opacity-100 opacity-0 transition-all duration-500 flex justify-center items-center md:gap-5 gap-2`}
+              );
+            })}
+          </div>
+
+          <div className="flex w-fit gap-5">
+            {projects[activeIndex].Links.map((innerObj, innerIndex) =>
+              innerObj.Link === "" ? (
+                <p
+                  key={innerIndex}
+                  className={` md:text-lg text-sm md:cursor-none text-black`}
+                  onMouseEnter={() =>
+                    setCursorVariant && setCursorVariant("default")
+                  }
+                  onMouseLeave={() =>
+                    setCursorVariant && setCursorVariant("text")
+                  }
                 >
-                  <div
-                    className="flex flex-col justify-center items-center text-center"
-                    onMouseEnter={() =>
-                      setCursorVariant && setCursorVariant("text")
-                    }
-                    onMouseLeave={() =>
-                      setCursorVariant && setCursorVariant("click")
-                    }
-                  >
-                    <span className=" lg:text-3xl md:text-2xl sm:text-xl text-lg tracking-tighter">
-                      {obj.Name}
-                    </span>
-                    <span className="lg:text-xl md:text-md text-sm flex md:flex-row flex-col items-center justify-center md:gap-5 gap-2">
-                      Technologies used:{" "}
-                      <div className="flex gap-2">
-                        {obj.Tech.map((innerObj, innerIndex) => {
-                          return (
-                            <img
-                              key={innerIndex}
-                              src={innerObj.Image}
-                              alt={innerObj.Alt}
-                              className="lg:h-8 h-5 lg:w-8 w-5 object-fill"
-                            />
-                          );
-                        })}
-                      </div>
-                    </span>
-                    <div className="flex w-fit gap-5">
-                      {obj.Links.map((innerObj, innerIndex) => {
-                        return (
-                          <a
-                            href={innerObj.Link}
-                            key={innerIndex}
-                            target="_blank"
-                            className={`${
-                              obj.Name === "Yaarit" ||
-                              obj.Name === "Tsrtc Bus Tracking"
-                                ? "text-blue-900 font-medium underlined-dark-blue"
-                                : "text-blue-400 underlined-light-blue"
-                            } md:text-lg text-sm md:cursor-none`}
-                            onMouseEnter={() =>
-                              setCursorVariant && setCursorVariant("default")
-                            }
-                            onMouseLeave={() =>
-                              setCursorVariant && setCursorVariant("text")
-                            }
-                          >
-                            <code>{innerObj.Name}</code>
-                          </a>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+                  <code>{innerObj.Name}</code>
+                </p>
+              ) : (
+                <a
+                  href={innerObj.Link}
+                  key={innerIndex}
+                  target="_blank"
+                  className={`underline underline-offset-8 md:text-lg text-sm md:cursor-none`}
+                  onMouseEnter={() =>
+                    setCursorVariant && setCursorVariant("default")
+                  }
+                  onMouseLeave={() =>
+                    setCursorVariant && setCursorVariant("text")
+                  }
+                >
+                  <code>{innerObj.Name}</code>
+                </a>
+              )
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

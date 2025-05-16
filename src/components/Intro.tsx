@@ -6,7 +6,7 @@ export default function Intro() {
   const { setCursorVariant } = useContext(CursorContext);
 
   return (
-    <div className="flex xl:flex-row flex-col-reverse w-[80%] h-auto md:py-10 py-5 px-1 xl:py-32 gap-5 justify-between items-center ">
+    <div className="flex xl:flex-row flex-col-reverse w-[80%] h-auto md:pt-10 py-5 px-1 xl:pt-32 gap-5 justify-between items-center ">
       <div className="flex flex-col md:gap-10 gap-5 max-w-[800px]">
         <span
           className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl silkscreen w-fit"
@@ -27,16 +27,16 @@ export default function Intro() {
         </span>
         <div className="flex items-center flex-wrap md:gap-5 gap-1">
           <a
-            href="https://drive.google.com/uc?export=download&id=1Ko2Qw8pfUuKQPQBxjQrkm0PXozskILJO"
-            download={true}
+            href="https://drive.google.com/file/d/1gNA0CnkWSYLhXZhjKdMplvIvKDSWXmp0/view?usp=sharing"
             onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
             onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
+            target="_blank"
             className="bg-white rounded-full text-black poppins shadow-2xl w-fit py-3 px-5 sm:text-sm text-xs md:cursor-none"
           >
-            Download Resume
+            My Resume
           </a>
           <a
-            href="#footer"
+            href="mailto:tarunjakkula136@gmail.com"
             onMouseEnter={() => setCursorVariant && setCursorVariant("default")}
             onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
             className="bg-transparent rounded-full text-white drop-shadow-2xl poppins w-fit p-3 sm:text-sm text-xs md:cursor-none"

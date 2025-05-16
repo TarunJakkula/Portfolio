@@ -4,6 +4,7 @@ import nextjsWhite from "../assets/icons/nextjs-white.svg";
 import tailwindcss from "../assets/icons/tailwindcss.svg";
 import reduxjs from "../assets/icons/reduxjs.svg";
 import reactnative from "../assets/icons/reactnative.svg";
+import rust from "../assets/icons/rust.svg";
 import threejs from "../assets/icons/threejs.svg";
 import nodejs from "../assets/icons/nodejs.svg";
 import expressjs from "../assets/icons/expressjs.svg";
@@ -21,10 +22,17 @@ import github from "../assets/icons/github.svg";
 import tensorflow from "../assets/icons/tensorflow.svg";
 import keras from "../assets/icons/keras.svg";
 import opencv from "../assets/icons/opencv.svg";
+import firebase from "../assets/icons/firebase.svg";
+import docker from "../assets/icons/docker.svg";
+import aws from "../assets/icons/aws.svg";
+import postgres from "../assets/icons/postgresql.svg";
+import fastapi from "../assets/icons/fastapi.svg";
+import graphql from "../assets/icons/graphql.svg";
 
 export {
   reactjs,
   nextjs,
+  rust,
   nextjsWhite,
   tailwindcss,
   reduxjs,
@@ -46,4 +54,10 @@ export {
   tensorflow,
   keras,
   opencv,
+  aws,
+  docker,
+  firebase,
+  postgres,
+  fastapi,
+  graphql,
 };
