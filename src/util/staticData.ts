@@ -335,9 +335,10 @@ const projects = [
       },
     ],
     Tech: [
+      { Image: mongodb, Alt: "mongodb" },
+      { Image: expressjs, Alt: "expressjs" },
       { Image: reactjs, Alt: "reactjs" },
       { Image: nodejs, Alt: "nodejs" },
-      { Image: expressjs, Alt: "expressjs" },
     ],
   },
 ];
