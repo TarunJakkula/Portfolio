@@ -24,38 +24,41 @@ export default function Project() {
       </span>
 
       <div
-        className={` flex-1 flex lg:flex-row-reverse md:gap-10 gap-5 flex-col justify-center h-auto relative overflow-hidden px-10`}
+        className={` flex-1 flex lg:flex-row-reverse md:gap-10 gap-5 flex-col justify-center h-auto overflow-hidden px-10`}
       >
         <div className="relative w-full max-w-[1000px] flex items-center">
           <div className="absolute top-0 left-0 h-full w-full hover:opacity-100 opacity-0 transition-opacity flex justify-between items-center">
             <button
               onClick={handleLeft}
-              className="bg-white rounded-full shadow-xl text-black silkscreen text-2xl h-10 w-10 pr-1 -translate-x-5"
+              disabled={activeIndex === 0}
+              className="bg-black rounded-full shadow-xl disabled:opacity-0 text-white silkscreen text-2xl h-10 w-10 pr-1 -translate-x-5"
             >
               {"<"}
             </button>
             <button
               onClick={handleRight}
-              className="bg-white rounded-full shadow-xl text-black silkscreen text-2xl h-10 w-10 pl-1 translate-x-5"
+              disabled={activeIndex === projects.length - 1}
+              className="bg-black rounded-full shadow-xl disabled:opacity-0 text-white silkscreen text-2xl h-10 w-10 pl-1 translate-x-5"
             >
               {">"}
             </button>
           </div>
           <img
+            key={"image" + activeIndex}
             src={projects[activeIndex].Image}
             alt={projects[activeIndex].Name}
-            className="w-full h-auto object-cover flex rounded-xl shadow-xl"
+            className="w-full aspect-video object-contain"
           />
         </div>
         <div
-          className={` poppins p-2 lg:w-[600px] w-[400px] flex flex-col justify-center md:gap-5 gap-2`}
+          className={` poppins p-2 lg:w-[600px] w-[400px] flex flex-col justify-center md:gap-5 gap-2 relative`}
           onMouseEnter={() => setCursorVariant && setCursorVariant("text")}
           onMouseLeave={() => setCursorVariant && setCursorVariant("click")}
         >
           <p
-            className={` gap-2 silkscreen w-[calc(100%-30px)] lg:text-3xl md:text-2xl sm:text-xl text-lg tracking-tighter`}
+            className={` gap-2 silkscreen w-[calc(100%-30px)] lg:text-3xl md:text-2xl sm:text-xl -mt-4 text-lg tracking-tighter`}
           >
-            {projects[activeIndex].Name}
+            {activeIndex + 1}. {projects[activeIndex].Name}
           </p>
           <div className="p-2 rounded-full bg-white w-fit flex gap-2 shadow-xl  ">
             {projects[activeIndex].Tech.map((innerObj, innerIndex) => {
@@ -69,39 +72,28 @@ export default function Project() {
               );
             })}
           </div>
-
+          <p
+            className={`silkscreen strokeIt-black gap-2 sm:text-xl text-lg tracking-widest`}
+          >
+            {projects[activeIndex].Tag}
+          </p>
           <div className="flex w-fit gap-5">
-            {projects[activeIndex].Links.map((innerObj, innerIndex) =>
-              innerObj.Link === "" ? (
-                <p
-                  key={innerIndex}
-                  className={` md:text-lg text-sm md:cursor-none text-black`}
-                  onMouseEnter={() =>
-                    setCursorVariant && setCursorVariant("default")
-                  }
-                  onMouseLeave={() =>
-                    setCursorVariant && setCursorVariant("text")
-                  }
-                >
-                  <code>{innerObj.Name}</code>
-                </p>
-              ) : (
-                <a
-                  href={innerObj.Link}
-                  key={innerIndex}
-                  target="_blank"
-                  className={`underline underline-offset-8 md:text-lg text-sm md:cursor-none`}
-                  onMouseEnter={() =>
-                    setCursorVariant && setCursorVariant("default")
-                  }
-                  onMouseLeave={() =>
-                    setCursorVariant && setCursorVariant("text")
-                  }
-                >
-                  <code>{innerObj.Name}</code>
-                </a>
-              )
-            )}
+            {projects[activeIndex].Links?.map((innerObj, innerIndex) => (
+              <a
+                href={innerObj.Link}
+                key={innerIndex}
+                target="_blank"
+                className={`underline underline-offset-8 md:text-lg text-sm md:cursor-none`}
+                onMouseEnter={() =>
+                  setCursorVariant && setCursorVariant("default")
+                }
+                onMouseLeave={() =>
+                  setCursorVariant && setCursorVariant("text")
+                }
+              >
+                <code>{innerObj.Name}</code>
+              </a>
+            ))}
           </div>
         </div>
       </div>

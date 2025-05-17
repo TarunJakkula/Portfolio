@@ -26,6 +26,7 @@ import {
   rust,
   socketio,
   tailwindcss,
+  threejs,
   // tensorflow,
   // threejs,
   typescript,
@@ -35,6 +36,9 @@ import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
 import img4 from "../assets/img4.png";
+import img5 from "../assets/img5.png";
+import img6 from "../assets/img6.png";
+import img7 from "../assets/img7.png";
 
 const list = [
   {
@@ -223,6 +227,7 @@ const projects = [
   {
     Image: img3,
     Name: "Commit",
+    Tag: "Personal",
     Links: [
       {
         Name: "Github",
@@ -241,7 +246,7 @@ const projects = [
   {
     Image: img1,
     Name: "Fixity edx",
-    Links: [{ Name: "Work Project", Link: "" }],
+    Tag: "Work",
     Tech: [
       { Image: nextjs, Alt: "nextjs" },
       { Image: graphql, Alt: "graphql" },
@@ -250,6 +255,7 @@ const projects = [
   {
     Image: img2,
     Name: "ClipForge",
+    Tag: "Work",
     Links: [
       {
         Name: "Github",
@@ -263,10 +269,10 @@ const projects = [
       { Image: mongodb, Alt: "mongodb" },
     ],
   },
-
   {
     Image: img4,
     Name: "Autonomous Pesticide Deployment",
+    Tag: "Personal",
     Links: [
       { Name: "Website", Link: "https://apd-nextjs.vercel.app/" },
       { Name: "Github", Link: "https://github.com/TarunJakkula/APD_Nextjs" },
@@ -275,6 +281,63 @@ const projects = [
       { Image: nextjs, Alt: "nextjs" },
       { Image: tailwindcss, Alt: "tailwindcss" },
       { Image: python, Alt: "python" },
+    ],
+  },
+  {
+    Image: img5,
+    Name: "ThreeJs Shirt Customizer",
+    Tag: "Personal",
+    Links: [
+      {
+        Name: "Website",
+        Link: "https://threejs-shirt-customizer-alpha.vercel.app/",
+      },
+      {
+        Name: "Github",
+        Link: "https://github.com/TarunJakkula/Threejs_Shirt_Customizer",
+      },
+    ],
+    Tech: [
+      { Image: javascript, Alt: "javascript" },
+      { Image: threejs, Alt: "threejs" },
+    ],
+  },
+  {
+    Image: img6,
+    Name: "Yaarit",
+    Tag: "Volunteer",
+    Links: [
+      {
+        Name: "Website",
+        Link: "https://yaarit-react.vercel.app/",
+      },
+      {
+        Name: "Github",
+        Link: "https://github.com/TarunJakkula/yaarit_react",
+      },
+    ],
+    Tech: [
+      { Image: reactjs, Alt: "reactjs" },
+      { Image: expressjs, Alt: "expressjs" },
+      { Image: tailwindcss, Alt: "tailwindcss" },
+      { Image: nodejs, Alt: "nodejs" },
+      { Image: mongodb, Alt: "mongodb" },
+    ],
+  },
+  {
+    Image: img7,
+    Name: "Tsrtc Bus Tracking",
+    Tag: "Personal",
+    Links: [
+      {
+        Name: "Github",
+        Link: "https://github.com/TarunJakkula/Projects/tree/main/TSRTC%20BUS%20TRACKING",
+      },
+    ],
+    Tech: [
+      { Image: reactjs, Alt: "reactjs" },
+      { Image: nodejs, Alt: "nodejs" },
+      { Image: expressjs, Alt: "expressjs" },
     ],
   },
 ];
